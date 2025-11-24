@@ -1,0 +1,33 @@
+{
+  "name": "playwright-demo",
+  "version": "1.0.0",
+  "description": "Playwright + TypeScript automation framework with POM, fixtures, and comprehensive test examples",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test tests/e2e",
+    "test:api": "playwright test tests/api",
+    "test:ui:smoke": "playwright test tests/e2e --grep @smoke",
+    "test:api:smoke": "playwright test tests/api --grep @smoke",
+    "test:report": "playwright show-report",
+    "test:codegen": "playwright codegen",
+    "global-setup": "ts-node src/globalSetup.ts"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "automation",
+    "testing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2"
+  }
+}
